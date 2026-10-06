@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>To Do List</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body
+    class="bg-slate-100 min-h-screen flex items-center justify-center font-sans"
+  >
+    <div class="bg-white p-8 rounded-xl shadow-md w-96">
+      <input
+        type="text"
+        id="gorev-input"
+        placeholder="Görev ekle..."
+        class="border border-slate-300 rounded px-3 py-2 w-full mb-2 outline-none focus:border-slate-500"
+      />
+      <p class="text-red-500 text-sm mb-2" id="gorev-hatasi"></p>
+      <button
+        id="gorev-ekle"
+        class="bg-slate-700 text-white px-4 py-2 rounded w-full hover:bg-slate-600 transition cursor-pointer"
+      >
+        Görev Ekle
+      </button>
+      <ul id="liste" class="mt-4"></ul>
+      <p class="text-slate-500 text-sm mt-3" id="durum"></p>
+    </div>
+    <script type="module" src="./script.js"></script>
+  </body>
+</html>
