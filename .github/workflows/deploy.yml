@@ -28,18 +28,21 @@ jobs:
         with:
           node-version: 20
 
-      - name: Install Tailwind and Build CSS
-        run: |
-          npm install -D tailwindcss @tailwindcss/cli
-          npx @tailwindcss/cli -i style.css -o ./dist/output.css --minify
+      - name: Install dependencies
+        run: npm install
+
+      - name: Build Project with Vite
+        run: npm run build
 
       - name: Setup Pages
         uses: actions/configure-pages@v5
+        with:
+          enablement: true
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: "."
+          path: "./dist"
 
       - name: Deploy to GitHub Pages
         id: deployment
